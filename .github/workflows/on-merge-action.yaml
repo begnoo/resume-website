@@ -22,7 +22,4 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v4
         with:
           aws-region: eu-central-1
-          role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
-
-      - name: Confirmation of secret
-        run: echo ${{secrets.AWS_ROLE_TO_ASSUME}} | sed 's/./& /g'
+          role-to-assume: arn:aws:iam::284924467302:role/ResumeGithubActionsRole
