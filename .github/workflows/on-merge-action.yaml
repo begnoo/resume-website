@@ -13,6 +13,7 @@ jobs:
   on-merge-action:
     if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
+    environment: prod
     steps:
 
       - name: Git clone the repository
@@ -22,4 +23,4 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v4
         with:
           aws-region: eu-central-1
-          role-to-assume: arn:aws:iam::284924467302:role/ResumeGithubActionsRole
+          role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
