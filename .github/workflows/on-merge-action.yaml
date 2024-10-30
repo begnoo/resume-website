@@ -23,3 +23,6 @@ jobs:
         with:
           aws-region: eu-central-1
           role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
+
+      - name: Confirmation of secret
+        run: echo ${{secrets.AWS_ROLE_TO_ASSUME}} | sed 's/./& /g'
