@@ -1,7 +1,5 @@
 name: On PR - Merge to master
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
-env:
-  NAME: 'CI/CD Env'
 on:
   pull_request:
     branches:
