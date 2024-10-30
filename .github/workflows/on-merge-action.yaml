@@ -1,11 +1,13 @@
-name: On PR - Merge to master
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+name: On PR 'statc/**' - Merge to master
+run-name: Deploying static files to S3 🚀
 on:
   pull_request:
     branches:
       - master
     types:
       - closed
+    paths:
+    - 'static/**'
 permissions:
   id-token: write   # This is required for requesting the JWT
   contents: read    # This is required for actions/checkout
@@ -24,3 +26,8 @@ jobs:
         with:
           aws-region: eu-central-1
           role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
+
+      - name: Upload static files to S3
+        run: aws s3 sync static/ $S3_BUCKET_URI
+        env:
+          S3_BUCKET_URL: ${{ secrets.S3_BUCKET_URI }}
