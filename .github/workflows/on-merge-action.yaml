@@ -28,6 +28,6 @@ jobs:
           role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
 
       - name: Upload static files to S3
-        run: aws s3 sync static/ $S3_BUCKET_URI
+        run: aws s3 sync static/ $S3_BUCKET_URL
         env:
           S3_BUCKET_URL: ${{ secrets.S3_BUCKET_URI }}
