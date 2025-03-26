@@ -1,101 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Software Developer Resume</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Console Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-
 <body>
-
-    <div class="container">
-        <div class="header">
-            <h1>Zoran Jankov</h1>
-            <p>Full-Stack Software Developer</p>
+    <div class="console">
+        <div class="output">
+            <span class="prompt">$</span> <span class="command">cat about_me.txt</span>
+            <div class="output">
+                <h1>Zoran Jankov</h1>
+                <p>Software Engineer</p>
+                <p>Fullstack Engineer with experience in building web based applications using python and typescript.
+                    Also interested in other areas of developement such as dev tools and devOps.
+                </p>
+            </div>
         </div>
 
-        <div class="contact-info">
-            <a href="https://www.linkedin.com/in/zoranjankov" target="_blank">LinkedIn</a> |
-            <a href="https://github.com/begnoo" target="_blank">GitHub</a>
+        <div class="output">
+            <span class="prompt">$</span> <span class="command">ls work-experience/</span>
+            <div class="output">
+                <ul>
+                    <li>dev@cyberlab-2022-2025/
+                        <ul>
+                            <li>fornulio-2022-2023</li>
+                            <li>emulate-energy-2022-2025</li>
+                            <li>beyonnex-2024</li>
+                            <li>sumer-sports-2025</li>
+                        </ul>
+                    </li>
+                    <li>dev@freelance/
+                        <ul>
+                            <li>poker-traning-app-2021</li>
+                            <li>incident-traffic-violation-detection-2020</li>
+                            <li>isobar-ot-2021</li>
+                            <li>hippo-test-2018</li>
+                        </ul>
+                    </li>
+                    <li>summer-camp-dev@levi9-2018/
+                        <ul>
+                            <li>movie-database-app-competition</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
 
-        <section class="summary">
-            <h2>Summary</h2>
-            <p>
-                Here is a noticable change... retry 3 with cloudfront invalidation
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pretium erat et lorem porta consectetur.
-                Nulla non risus eget sapien lacinia mollis eu vitae enim. Nulla varius eu elit in mollis. Donec ut
-                convallis nunc. Donec nibh turpis, dapibus eu volutpat eu, dictum in erat. Duis volutpat massa eu
-                viverra euismod. Nam lectus arcu, malesuada quis finibus et, condimentum a ex.
-            </p>
-        </section>
+        <div class="output">
+            <span class="prompt">$</span> <span class="command">curl --output cv.pdf "https://example.net/xxx/download?path=yyy&files=zzz.csv"            </span>
+            <div class="output">
+                <p>Download my CV: <a href="cv.pdf" download>cv.pdf</a></p>
+            </div>
+        </div>
 
-        <section class="skills">
-            <h2>Skills</h2>
-            <ul>
-                <li>Python</li>
-                <li>JavaScript</li>
-                <li>React.js</li>
-                <li>Node.js</li>
-                <li>FastAPI</li>
-                <li>SQL</li>
-                <li>Docker</li>
-                <li>AWS</li>
-            </ul>
-        </section>
-
-        <section class="experience">
-            <h2>Experience</h2>
-            <ul>
-                <li>
-                    <h4>Senior Software Developer | XYZ Solutions</h4>
-                    <p>July 2020 – Present</p>
-                    p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pretium erat et lorem porta
-                        consectetur. Nulla non risus eget sapien lacinia mollis eu vitae enim.</p>
-                </li>
-                <li>
-                    <h4>Full-Stack Developer | ABC Tech</h4>
-                    <p>June 2017 – June 2020</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pretium erat et lorem porta
-                        consectetur. Nulla non risus eget sapien lacinia mollis eu vitae enim.</p>
-                </li>
-            </ul>
-        </section>
-
-        <section class="projects">
-            <h2>Projects</h2>
-            <ul>
-                <li>
-                    <h4>Project Management Web App</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pretium erat et lorem porta
-                        consectetur. Nulla non risus eget sapien lacinia mollis eu vitae enim.</p>
-                </li>
-                <li>
-                    <h4>eCommerce API</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pretium erat et lorem porta
-                        consectetur. Nulla non risus eget sapien lacinia mollis eu vitae enim.</p>
-                </li>
-            </ul>
-        </section>
-
-        <section class="education">
-            <h2>Education</h2>
-            <ul>
-                <li>
-                    <h4>Bachelor of Software Development | University of Novi Sad</h4>
-                    <p>Graduated: October 2022</p>
-                </li>
-            </ul>
-        </section>
+        <div class="output">
+            <span class="prompt">$</span> <span class="command"></span><span class="cursor"></span>
+        </div>
     </div>
-
-    <footer>
-        &copy; 2024 John Doe. All rights reserved.
-    </footer>
-
 </body>
-
 </html>
